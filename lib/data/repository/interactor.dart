@@ -10,7 +10,6 @@ class ApiInteractor {
 
   Future<IdtResult<List<CurrencyModel>?>> getListCriptos() async {
     final response = await locator<CriptoCurrencyService>().getListCriptos();
-
     return response;
   }
 }

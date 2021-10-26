@@ -5,18 +5,23 @@ import '../../view_model.dart';
 class HomeStatus extends ViewStatus {
   final String money;
   final List<CurrencyModel> listCripto;
+  final bool isLoading;
 
   HomeStatus({
     required this.money,
     required this.listCripto,
+    this.isLoading = false,
   });
 
   HomeStatus copyWith({
     String? money,
-    List<CurrencyModel>? listCriptoResponse,
+    List<CurrencyModel>? listCripto,
+    bool? isLoading,
   }) {
-  return HomeStatus(
-  money: money ?? this.money,
-  listCripto: listCriptoResponse ?? this.listCripto);
+    return HomeStatus(
+      money: money ?? this.money,
+      listCripto: listCripto ?? this.listCripto,
+      isLoading: isLoading ?? this.isLoading,
+    );
   }
 }
